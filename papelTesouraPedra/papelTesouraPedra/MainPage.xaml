@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="papelTesouraPedra.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                 x:Name="round"
+                 Text="Round:"
+            />
+            <Image
+                 x:Name="stone"
+                 Source="pedra.jpg"
+                 WidthRequest="100"
+            />
+            <Label
+                x:Name="campojoga"
+                Text="Jogador(a):"
+                />
+            <Entry
+                x:Name="nome"
+                Placeholder="Escreva o seu nome"/>
+        
+            <Label
+                x:Name="ResulLabel" 
+                Text=""
+              />
+            <Picker 
+             x:Name="escolha"  
+             Title=" Escolha pedra, papel ou tesoura">
+                <Picker.Items>
+                    <x:String>Pedra</x:String>
+                    <x:String>Papel</x:String>
+                    <x:String>Tesoura</x:String>
+
+                </Picker.Items>
+            </Picker>
+            <HorizontalStackLayout Spacing="10">
+
+                <Label
+                  x:Name="suaEscolha" 
+                  Text=" Você escolheu:"
+                 />
+                <Label
+                x:Name="opcaoSeleciona" 
+                Text="tudo"
+                 />
+                <Label
+                      x:Name="oponente" 
+                      Text=" O oponente escolheu:"
+                 />
+                <Label
+                    x:Name="oponenteEscolha" 
+                    Text="oii"
+                 />
+            </HorizontalStackLayout>
+            <Button 
+                BackgroundColor="Black"
+                WidthRequest="150"
+                x:Name="jogarButton"
+                Text="Jogar" 
+                Clicked="OnCounterClicked"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
